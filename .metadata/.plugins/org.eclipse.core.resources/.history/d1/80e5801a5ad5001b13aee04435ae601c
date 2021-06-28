@@ -1,0 +1,23 @@
+package app;
+
+import java.util.Scanner;
+
+import entidades.Contato;
+
+public class Programa {
+
+	public static void main(String[] args) {
+		
+		Scanner sc = new Scanner(System.in);
+		
+		System.out.println("----------MENU----------");
+		System.out.println("Criar contato .......(1)");
+		System.out.println("Remover contato .....(2)");
+		System.out.println("Sair ................(0)");
+		
+		
+		sc.close();
+
+	}
+	
+}

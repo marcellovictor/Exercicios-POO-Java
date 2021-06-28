@@ -1,0 +1,24 @@
+package app;
+
+import entidades.Casa;
+
+public class Main {
+
+	public static void main(String[] args) {
+		
+		Casa casa = new Casa();
+
+		imprimeMenu();
+
+	}
+	
+	static void imprimeMenu() {
+		System.out.println();
+		System.out.println("---------MENU---------/");
+		System.out.println("Pintar casa ........(1)");
+		System.out.println("Verificar portas ...(2)");
+		System.out.println("Menu de portas .....(3)");
+		System.out.println();
+	}
+
+}

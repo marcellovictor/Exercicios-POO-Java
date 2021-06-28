@@ -1,0 +1,22 @@
+
+public class Main {
+
+	public static void main(String[] args) {
+		
+		Porta porta = new Porta(1.2, 3.5, "Roxo");
+		
+		imprimeMenu(porta);
+		
+
+	}
+	
+	static void imprimeMenu(Porta porta) {
+		
+		System.out.println("-------MENU-------");
+		System.out.println((porta.estaAberta()) ? "Fechar porta ...(1)" : "Abrir porta ....(1)");
+		System.out.println("Pintar .........(2)");
+		System.out.println("Sair ...........(0)");
+		System.out.println("-----------------");
+	}
+
+}

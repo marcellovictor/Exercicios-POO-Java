@@ -1,0 +1,44 @@
+package app;
+
+import java.util.Scanner;
+
+import entidades.Contato;
+
+public class Programa {
+
+	public static void main(String[] args) {
+		
+		Scanner sc = new Scanner(System.in);
+		
+		imprimeMenu();
+		
+		escolheTarefa(sc);
+		
+		sc.close();
+
+	}
+	
+	static void imprimeMenu() {
+		System.out.println();
+		System.out.println("----------MENU----------");
+		System.out.println("Criar contato .......(1)");
+		System.out.println("Remover contato .....(2)");
+		System.out.println("Sair ................(0)");
+		System.out.println();
+	}
+	
+	static int escolheTarefa(Scanner sc) {
+		System.out.print(">>> ");
+		int action = sc.nextInt();
+		while (action < 0 || action > 2) {
+			System.out.println("Opção não disponível! Digite novamente:");
+			
+			imprimeMenu();
+			
+			System.out.print(">>> ");
+			action = sc.nextInt();
+		}
+		return action;
+	}
+	
+}

@@ -1,0 +1,31 @@
+package entidades;
+
+import java.util.ArrayList;
+import java.util.List;
+
+public class Agenda {
+
+	private static List<Contato> listaDeContatos = new ArrayList<>();
+	
+	public void adicionarContato(Contato contato) {
+		this.listaDeContatos.add(contato);
+	}
+	
+	public void removerContato(Contato contato) {
+		this.listaDeContatos.remove(contato);
+	}
+	
+	public static List<Contato> getListaDeContatos() {
+		return listaDeContatos;
+	}
+	
+	public static void imprimeLista() {
+		
+		for (int i = 0; i < listaDeContatos.size(); i++) {
+			System.out.println();
+			System.out.println(listaDeContatos.get(i));
+			System.out.println();
+		}
+		
+	}
+}

@@ -1,0 +1,52 @@
+import java.util.Scanner;
+
+public class Main {
+
+	public static void main(String[] args) {
+		
+		Porta porta = new Porta(1.2, 3.5, "Roxo");
+		
+		int escolha;
+		
+		do {
+		
+			imprimeMenu(porta);
+		
+			escolha = escolheOpcao();
+		
+		} while (escolha != 0);
+
+	}
+	
+	static void imprimeMenu(Porta porta) {
+		
+		System.out.println();
+		System.out.println("-------MENU-------/");
+		System.out.println((porta.estaAberta()) ? "Fechar porta ...(1)" : "Abrir porta ....(1)");
+		System.out.println("Pintar .........(2)");
+		System.out.println("Sair ...........(0)");
+		System.out.println("------------------/");
+		System.out.println();
+	}
+	
+	static int escolheOpcao() {
+		Scanner sc = new Scanner(System.in);
+		
+		System.out.println("Digite o que deseja fazer");
+		System.out.print(">>> ");
+		int resp = sc.nextInt();
+		
+		while (resp < 0 || resp > 2) {
+			System.out.println("Opção indisponível!");
+			System.out.println();
+			System.out.println("Digite o que deseja fazer");
+			System.out.print(">>> ");
+			resp = sc.nextInt();
+		}
+		
+		// sc.close();
+		
+		return resp;
+	}
+
+}

@@ -1,0 +1,115 @@
+package entidades;
+
+public class Baralho {
+
+	private Carta[] arrayDeCartas = new Carta[52];
+	
+	public Baralho () {
+		String naipe = null;
+		
+		for (int i = 0; i < 4; i++) {
+			
+			switch (i) {
+			case 0:
+				naipe = "Ouros";
+				break;
+				
+			case 1:
+				naipe = "Copas";
+				break;
+				
+			case 2:
+				naipe = "Espadas";
+				break;
+			
+			case 3:
+				naipe = "Paus";
+				break;
+				
+			default:
+				System.out.println("Erro no naipe!");
+				break;
+			}
+			
+			for (int j = 0; j < 13; j++) {
+				arrayDeCartas[(j+1)*(i+1) - 1] = new Carta("x", naipe);
+			}
+			
+		}
+			
+			
+	}
+	
+	
+	/*public Baralho() {
+		String naipe = null;
+		
+		for (int i = 0; i < 4; i++) {
+			
+			switch (i) {
+			case 0:
+				naipe = "Ouros";
+				break;
+				
+			case 1:
+				naipe = "Copas";
+				break;
+				
+			case 2:
+				naipe = "Espadas";
+				break;
+			
+			case 3:
+				naipe = "Paus";
+				break;
+				
+			default:
+				System.out.println("Erro no naipe!");
+				break;
+			}		
+			
+			for (int j = 0; j < 13; j++) {
+				if (j == 0) {
+					arrayDeCartas[i * 13] = new Carta("Às", naipe);
+				}
+				else if (j >= 1 && j <= 9) {
+					arrayDeCartas[i * j] = new Carta(Integer.toString(j+1), naipe);
+				}
+				else {
+					String valor = null;
+					
+					switch (j) {
+					case 10:
+						valor = "Valete";
+						break;
+						
+					case 11:
+						valor = "Dama";
+						break;
+						
+					case 12:
+						valor = "Rei";
+						break;
+						
+					default:
+						System.out.println("Erro no valor!");
+						break;
+					}
+					
+					arrayDeCartas[i * j] = new Carta(valor, naipe);
+				}
+			}
+		}
+	}*/
+	
+	@Override
+	public String toString() {
+		StringBuilder sb = new StringBuilder();
+		
+		for (int i = 0; i < 52; i++) {
+			sb.append(arrayDeCartas[i] + "\n");
+		}
+		
+		return sb.toString();
+	}
+}

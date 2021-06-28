@@ -1,0 +1,31 @@
+
+public class Main {
+
+	public static void main(String[] args) {
+		
+		TV tv = new TV();
+		
+		imprimeMenu(tv);
+		
+		tv.botaoOnOff();
+		tv.botaoOnOff();
+		
+		imprimeMenu(tv);
+
+	}
+
+	
+	static void imprimeMenu(TV tv) {
+		System.out.println();
+		System.out.println("-----------MENU----------/");
+		System.out.println(tv.isLigada() ? "Desligar TV ...........(1)" : "Ligar TV ..............(1)");
+		System.out.println("Aumentar volume .......(2)");
+		System.out.println("Diminuir volume .......(3)");
+		System.out.println("Subir canal ...........(4)");
+		System.out.println("Descer canal ..........(5)");
+		System.out.println("Selecionar canal ......(6)");
+		System.out.println(tv.isMutada() ? "Desativar som .........(7)" : "Ativar som ............(7)");
+		System.out.println("Sair ..................(0)");
+		System.out.println();
+	}
+}
